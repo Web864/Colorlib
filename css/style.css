@@ -1,0 +1,19 @@
+.hero-section {
+  position: relative;
+  z-index: 1; /* make sure content stays above the before image */
+  overflow: hidden; /* hides anything overflowing */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../Asserts/download.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9; /* transparency */
+  z-index: -1; /* places it behind text */
+}
